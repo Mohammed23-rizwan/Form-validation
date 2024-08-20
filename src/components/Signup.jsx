@@ -4,8 +4,8 @@ import validate from "../utils/validates";
 const Signup = () => {
   const { handlechange, value, handleclick, errorss } = Useform(validate);
   return (
-    <div className="Form-right">
-      <h2>Form Validation</h2>
+    <div className="form-right">
+      <h2 className="heading">Form Validation</h2>
       <form>
         <div className="input-type">
           <label htmlFor="" className="inputname">
@@ -14,12 +14,12 @@ const Signup = () => {
           <input
             type="text"
             name="Username"
-            id=""
+            id="username"
             value={value.Username}
             placeholder="Enter Your UserName"
             onChange={handlechange}
           />
-          {errorss.username && <p>{errorss.username}</p>}
+          {errorss.Username && <p>{errorss.Username}</p>}
         </div>
         <div className="input-type">
           <label htmlFor="" className="inputname">
@@ -28,13 +28,14 @@ const Signup = () => {
           <input
             type="email"
             name="email"
-            id=""
+            id="email"
             placeholder="Enter Your Email"
             value={value.email}
             onChange={handlechange}
           />
+          {errorss.email && <p>{errorss.email}</p>}
         </div>
-        {errorss.email && <p>{errorss.email}</p>}
+
         <div className="input-type">
           <label htmlFor="" className="inputname">
             Password
@@ -42,11 +43,12 @@ const Signup = () => {
           <input
             type="password"
             name="password"
-            id=""
+            id="password"
             placeholder="Enter Your Password"
             value={value.password}
             onChange={handlechange}
           />
+          {errorss.password && <p>{errorss.password}</p>}
         </div>
         <div className="input-type">
           <label htmlFor="" className="inputname">
@@ -55,13 +57,15 @@ const Signup = () => {
           <input
             type="password"
             name="password2"
-            id=""
+            id="password2"
             placeholder="Re-enter Your Password"
             value={value.password2}
             onChange={handlechange}
           />
+          {errorss.password2 && <p>{errorss.password2}</p>}
         </div>
-        <button type="submit" onClick={handleclick}>
+
+        <button type="submit" className="button-name" onClick={handleclick}>
           Submit
         </button>
       </form>

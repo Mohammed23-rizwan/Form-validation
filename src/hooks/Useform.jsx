@@ -1,10 +1,8 @@
-// import React from "react";
-
 import { useState } from "react";
 
 const Useform = (validate) => {
   const [value, setvalues] = useState({
-    username: "",
+    Username: "",
     email: "",
     password: "",
     password2: "",
